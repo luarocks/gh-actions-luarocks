@@ -59,6 +59,7 @@ async function installWindows(luaRocksVersion, tempBuildPath, luaRocksInstallPat
       listeners: {
         stdout: (data) => {
           msvcrt += data.toString()
+          msvcrt = msvcrt.trim()
           if (msvcrt === "nil") {
             msvcrt = ""
           }
