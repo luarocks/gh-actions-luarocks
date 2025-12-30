@@ -23,7 +23,7 @@ jobs:
       with:
         luaVersion: ${{ matrix.luaVersion }}
 
-    - uses: luarocks/gh-actions-luarocks@master
+    - uses: ./
 
     - name: test lua
       run: lua -e 'print("hi from lua")'
