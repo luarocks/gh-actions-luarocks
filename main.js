@@ -1,12 +1,11 @@
 
-const core = require("@actions/core")
-const exec = require("@actions/exec")
-const io = require("@actions/io")
-const tc = require("@actions/tool-cache")
-const fsp = require("fs").promises
-const semver = require("semver")
-
-const path = require("path")
+import * as core from "@actions/core"
+import * as exec from "@actions/exec"
+import * as io from "@actions/io"
+import * as tc from "@actions/tool-cache"
+import { promises as fsp } from "fs"
+import semver from "semver"
+import path from "path"
 
 const BUILD_PREFIX = ".build-luarocks"
 
