@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@main
     - uses: luarocks/gh-actions-lua@master
       with:
         luaVersion: ${{ matrix.luaVersion }}
@@ -41,7 +41,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@main
     - uses: luarocks/gh-actions-lua@master
       with:
         luaVersion: "5.2"
@@ -61,7 +61,7 @@ jobs:
     runs-on: macos-latest
 
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@main
     - uses: luarocks/gh-actions-lua@master
     - uses: ./
 
@@ -82,7 +82,7 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@main
     - uses: step-security/msvc-dev-cmd@v1
       if: ${{ ! contains(matrix.luaVersion, 'luajit') }}
     - uses: luarocks/gh-actions-lua@master
@@ -104,7 +104,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@main
     - uses: leafo/gh-actions-openresty@main
     - uses: ./
       with:
