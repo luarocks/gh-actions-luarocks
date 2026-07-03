@@ -83,7 +83,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@master
-    - uses: ilammy/msvc-dev-cmd@v1
+    - uses: step-security/msvc-dev-cmd@v1
       if: ${{ ! contains(matrix.luaVersion, 'luajit') }}
     - uses: luarocks/gh-actions-lua@master
       with:
